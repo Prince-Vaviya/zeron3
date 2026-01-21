@@ -19,7 +19,7 @@ const Navbar = () => {
             opacity: 1,
             duration: 1,
             ease: "power3.out",
-            delay: 1.5 // Wait for Hero intro (0.8s reveal + buffer)
+            delay: 2.8 // Wait for Name Preloader + Shutter (approx 2s + 0.8s)
         });
     }, []);
 
@@ -37,8 +37,8 @@ const Navbar = () => {
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="text-xl font-heading font-black tracking-widest uppercase cursor-pointer"
                 >
-                    <span className="text-white">Germa</span>
-                    <span className="text-[#E3FB29]">Labs</span>
+                    <span className="text-white">ZERON</span>
+                    <span className="text-[#E3FB29] font-lexend font-black text-3xl">3</span>
                 </div>
 
                 <div className="w-px h-6 bg-white/20 hidden md:block"></div>

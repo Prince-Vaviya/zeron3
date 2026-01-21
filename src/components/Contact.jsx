@@ -53,7 +53,7 @@ const Contact = () => {
             </div>
 
             <footer className="mt-32 text-text-secondary font-body text-sm opacity-50">
-                © 2026 Germa Portfolio. All rights reserved.
+                © 2026 ZERON3. All rights reserved.
             </footer>
         </section>
     );

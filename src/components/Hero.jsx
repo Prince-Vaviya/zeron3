@@ -53,29 +53,20 @@ const Hero = () => {
         return () => gsap.ticker.remove(loop);
     }, []);
 
-    // Initial Intro Animations
+    // Initial Intro Animations (Triggered after global preloader)
     useEffect(() => {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline();
 
-            // 1. Shutter Columns Reveal (Alternating Up/Down)
-            tl.to(".reveal-panel", {
-                height: 0,
-                duration: 0.8,
-                ease: "power4.inOut",
-                stagger: {
-                    amount: 0.25,
-                    from: "center"
-                },
-                delay: 0.1
-            })
-                // 2. Hero Content Scale & Fade In
-                .fromTo(".hero-content",
-                    { opacity: 0, scale: 1.1, filter: "blur(20px)" },
-                    { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.out" },
-                    "-=0.6"
-                )
-                // 3. Footer Elements Slide Up
+            // Wait for Preloader (~2.5s total duration)
+            const preloaderDelay = 2.4;
+
+            // 1. Hero Content Scale & Fade In
+            tl.fromTo(".hero-content",
+                { opacity: 0, scale: 1.1, filter: "blur(20px)" },
+                { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.8, ease: "power2.out", delay: preloaderDelay }
+            )
+                // 2. Footer Elements Slide Up
                 .fromTo(".hero-footer",
                     { y: 50, opacity: 0 },
                     { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "power2.out" },
@@ -98,12 +89,6 @@ const Hero = () => {
             ref={containerRef}
             className="relative min-h-screen w-full bg-black overflow-hidden flex flex-col justify-center items-center text-center cursor-none"
         >
-            {/* Intro Reveal Panels (Shutter Effect) */}
-            <div className="absolute inset-0 z-[60] flex pointer-events-none">
-                {[...Array(5)].map((_, i) => (
-                    <div key={i} className="reveal-panel w-1/5 h-full bg-[#E3FB29]" />
-                ))}
-            </div>
 
             {/* Custom Cursor */}
             <div
@@ -145,7 +130,7 @@ const Hero = () => {
             <div className="hero-footer absolute bottom-12 w-full px-8 md:px-16 flex justify-between items-end text-left z-30 pointer-events-auto cursor-auto">
                 <div className="max-w-xs">
                     <p className="text-white/60 text-sm md:text-base font-body font-medium leading-relaxed">
-                        <span className="block text-white mb-2">GERMA LABS</span>
+                        <span className="block text-white mb-2">ZERON3</span>
                         Strategy, Design, <br />
                         Performance & AI.
                     </p>
