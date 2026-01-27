@@ -46,10 +46,12 @@ const ServiceCard = ({ service }) => {
             className="p-8 rounded-2xl w-80 h-96 flex-shrink-0 flex flex-col justify-between cursor-pointer transition-transform bg-white/5 backdrop-blur-sm border border-white/10"
             style={{ background: service.gradient }}
         >
-            <div className="w-16 h-16 rounded-full bg-black/10 flex items-center justify-center">
-                <Icon size={32} className="text-black" />
+            <div className="flex-1 flex items-center justify-center w-full">
+                <div className="w-32 h-32 rounded-full bg-black/10 flex items-center justify-center">
+                    <Icon size={64} className="text-black" />
+                </div>
             </div>
-            <h3 className="text-2xl font-heading font-black text-black">
+            <h3 className="text-3xl font-heading font-black text-black text-center">
                 {service.title}
             </h3>
         </div>

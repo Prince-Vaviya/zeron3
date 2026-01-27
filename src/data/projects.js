@@ -4,7 +4,7 @@ export const projects = [
         title: "PandoAI",
         subtitle: "AI-Powered Mental Wellness Platform",
         description: "A comprehensive mental wellness web application built with Next.js 14, featuring AI-powered conversations, mood tracking, mindfulness exercises, and personalized insights.",
-        image: "https://placehold.co/1920x1080/262626/E3FB29/png?text=PandoAI",
+        image: "/pandoai.png",
         video: "", // Placeholder for video
         link: "https://pando-ai-iota.vercel.app/dashboard",
         features: [
@@ -28,9 +28,9 @@ export const projects = [
         title: "Lystré",
         subtitle: "Fashion E-Commerce Platform",
         description: "A modern, full-featured fashion e-commerce platform featuring a neobrutalism-inspired admin dashboard and an elegant customer portal.",
-        image: "https://placehold.co/1920x1080/262626/E3FB29/png?text=Lystre",
+        image: "/lystre.png",
         video: "", // Placeholder
-        link: "", // No link provided in prompt, or maybe implicit?
+        link: "https://lystre.vercel.app/",
         features: [
             "Customer Portal: Product catalog, cart, wishlist, reviews",
             "Size Guide & AI Fit: Interactive charts and AI outfit recommendations",
@@ -52,7 +52,7 @@ export const projects = [
         title: "Mojito Website",
         subtitle: "Client Website",
         description: "A custom website built for a client using GSAP animations.",
-        image: "https://placehold.co/1920x1080/262626/E3FB29/png?text=Mojito",
+        image: "/mojito.png",
         video: "",
         link: "https://mojito-website-gsap-five.vercel.app/",
         features: [
@@ -69,7 +69,7 @@ export const projects = [
         title: "Rocarios",
         subtitle: "AI Size Prediction & Virtual Try-On",
         description: "Predict shoulder width, chest, and waist measurements from height to recommend clothing sizes via an API or web app.",
-        image: "https://placehold.co/1920x1080/262626/E3FB29/png?text=Rocarios",
+        image: "/rocarios.png",
         video: "",
         link: "https://www.rocarios.com/",
         features: [
