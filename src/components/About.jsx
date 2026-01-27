@@ -7,8 +7,8 @@ const About = () => {
     const textRef = useRef(null);
     const imageRef = useRef(null);
 
-    // Placeholder for "mock-agency-team.png"
-    const teamImage = "https://placehold.co/800x600/262626/E3FB29/png?text=Agency+Team";
+    // Local team image
+    const teamImage = "/team.png";
 
     React.useEffect(() => {
         const ctx = gsap.context(() => {

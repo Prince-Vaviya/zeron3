@@ -46,12 +46,11 @@ const ProjectDetails = () => {
                             poster={project.image} 
                         />
                     ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a] text-text-secondary relative">
-                            <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover opacity-50 blur-sm" />
-                            <div className="relative z-10 p-4 bg-black/50 rounded-xl backdrop-blur-md">
-                                <p className="text-xl">Video Preview Coming Soon</p>
-                            </div>
-                        </div>
+                        <img 
+                            src={project.image} 
+                            alt={project.title} 
+                            className="w-full h-full object-cover" 
+                        />
                     )}
                 </div>
 
